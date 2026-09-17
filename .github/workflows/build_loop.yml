@@ -2,6 +2,9 @@ name: 4. Build Loop Manual
 run-name: Build Loop Manual (${{ github.ref_name }})
 on:
   workflow_dispatch:
+  schedule:
+    - cron: '15 6 1 * *'
+      timezone: 'Europe/Copenhagen'
 
 env:
   GH_PAT: ${{ secrets.GH_PAT }}
